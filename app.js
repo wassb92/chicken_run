@@ -10,12 +10,8 @@ app.use(express.json());
 
 /* Routes */
 
-
 app.use('/chicken', postsRoute);
 
-// app.get('*', (req, res) => {
-    // res.redirect('/chicken');
-// });
 
 /* Connect to DB */
 
