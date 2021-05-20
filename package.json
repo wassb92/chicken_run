@@ -2,9 +2,9 @@
   "name": "chicken_run",
   "version": "1.0.0",
   "description": "Chicken_run CRUD API",
-  "main": "index.js",
+  "main": "chicken.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon chicken.js"
   },
   "author": "Bouzidi Wassini",
   "license": "ISC",
