@@ -1,3 +1,0 @@
-PORT="Entrer un port disponible"
-COLLECTION_NAME="Entrer la collection de votre database MongoDB"
-DB_CONNECTION="Entrer l'URL de votre connexion MongoDB"

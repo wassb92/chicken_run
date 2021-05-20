@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Doc page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/doc_style.css">
+  <h1 class="title">Chicken run documentation</h1><br><br>
+</head>
+
+<body>
+  <div class="requir_head">
+    <p class="requirements"> Before starting, please make sure you have all requirements :</p>
+    <ul class="requir_needed">
+      <li>Body-parser: 1.19.0</li>
+      <li>Dotenv: 9.0.2</li>
+      <li>Express: 4.17.1</li>
+      <li>Mongoose: 5.12.9</li>
+      <li>Nodemon: 2.0.7</li>
+      <li>An .env file that looks like :</li>
+      <p>PORT="Entrer un port disponible"<br>
+        COLLECTION_NAME="Entrer le nom de la collection de votre database MongoDB"<br>
+        DB_CONNECTION="Entrer l'URL de votre database MongoDB"</p>
+      <li>A good mood ! 😄☀️</li><br>
+    </ul><br>
+  </div>
+  <div class="my_doc">
+    <h1 class="doc_title">Home page or /doc page</h1>
+    <p>Get documentation for know how to use chicken run API</p><br>
+
+    <h1 class="doc_func">Const PostSchema</h1>
+    <p>Inside this function, you can add any item you want
+      for connect their to database after</p>
+    <p>In our case, we have 5 items :</p>
+    <ul>
+      <li>A name (required)</li>
+      <li>A birthday</li>
+      <li>A weight (required)</li>
+      <li>A step</li>
+      <li>A status "isRunning"</li>
+    </ul>
+    <br>
+    <h1 class="doc_func">CRUD</h1>
+    <ul>
+      <li>router.get('/')</li>
+      <p>Get all informations about all item(s) created</p><br>
+      <li>router.post('/')</li>
+      <p>Creat a new item with required value and an id</p><br>
+      <li>router.get('/:ChickenId)</li>
+      <p>Get all informations about an item selected by the id</p><br>
+      <li>router.delete('/:ChickenId)</li>
+      <p>Delete an item selected by the id</p><br>
+      <li>router.patch('/:ChickenId)</li>
+      <p>Modify a value from an item select by the id</p><br>
+      <li>router.patch('/run/:ChickenId)</li>
+      <p>Increase step value and change the status from "isRunning" to true</p><br>
+      <li>router.get('/run/:ChickenId)</li>
+      <p>Get all informations about all item(s) created and with step value increased
+        and also isRunning status is true</p><br>
+    </ul>
+  </div>
+</body>
+<footer>
+  <h2>Chicken run API</h2>
+  <p>Chicken run API documentation<br>
+    Made by Bouzidi Wassini<br>
+    May 2021</p>
+</footer>
+
+</html>

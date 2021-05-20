@@ -19,6 +19,6 @@ const PostSchema = mongoose.Schema({
         type: Boolean,
         default: false
     }
-}, {collection: process.env.COLLECTION_NAME});
+}, { collection: process.env.COLLECTION_NAME });
 
 module.exports = mongoose.model(process.env.COLLECTION_NAME, PostSchema);

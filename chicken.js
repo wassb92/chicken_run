@@ -7,15 +7,20 @@ const bodyParser = require('body-parser');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(__dirname + '/public'));
 
-
-const OK =  200;
+const OK = 200;
 const NOT_FOUND = 404;
+
 
 /* Routes */
 
 app.get('/', (req, res) => {
-    res.redirect('/chicken');
+    res.redirect('/doc');
+});
+
+app.get('/doc', (req, res) => {
+    res.sendFile('public/index.html', { root: __dirname });
 });
 
 app.use('/chicken', postsRoute, (req, res) => {
@@ -29,7 +34,7 @@ app.get('*', (req, res) => {
 
 /* Connect to DB */
 
-mongoose.connect(process.env.DB_CONNECTION ,{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 app.listen(process.env.PORT);
